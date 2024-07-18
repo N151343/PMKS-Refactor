@@ -1,0 +1,43 @@
+<div id="settings" style="z-index: 999;">
+  <panel-section-collapsible>
+
+  </panel-section-collapsible>
+
+  <collapsible-subsection [expanded]='true' titleLabel='Go to Github' [expanded]="sectionExpanded['LBasic']"
+                          (opened)="sectionExpanded['LBasic'] = true" (closed)="sectionExpanded['LBasic'] = false">
+    <title-block icon='expand_more' description='' class="synthesisHeader">
+      Github
+    </title-block>
+    <p>PMKS+ is open source! Do you want to help us develop it?</p>
+    <button mat-button class="toolbar-button" (click)="gotoGithub();"
+            matTooltip='Go to our github repo'
+            matTooltipShowDelay='1000'>
+      <mat-icon>github</mat-icon>
+      Github
+    </button>
+  </collapsible-subsection>
+
+  <collapsible-subsection [expanded]='true' titleLabel='Feedback Form' [expanded]="sectionExpanded['LBasic']"
+                          (opened)="sectionExpanded['LBasic'] = true" (closed)="sectionExpanded['LBasic'] = false">
+    <div class="feedback-form">
+      <title-block icon='expand_more'
+                   description='Do you want to attach a file? Send us an email at gr-pmksplus@wpi.edu'
+                   class="synthesisHeader">
+        Send Feedback
+      </title-block>
+
+      <form (ngSubmit)="sendEmail($event); onSubmit($event);">
+        <textarea [(ngModel)]="message" name="message" type='text' placeholder="Leave a message" required></textarea>
+        <input name="ch1" type="checkbox" id="form1">
+        <label for="form1">I would like a response</label>
+        <input name="ch2" type="checkbox" id="form2">
+        <label for="form2">Send browser and version data</label>
+        <input name="ch3" type="checkbox" id="form3">
+        <label for="form3">Send a copy of the open project</label>
+        <input class="feedback-btn" type="submit" value="Send">
+      </form>
+
+    </div>
+  </collapsible-subsection>
+
+</div>

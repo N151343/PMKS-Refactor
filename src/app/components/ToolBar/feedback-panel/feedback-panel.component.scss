@@ -1,0 +1,24 @@
+
+
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+  #feedback{
+    background-color: #fff;
+    border-radius: 3px;
+    width:395px;
+    float: right;
+    margin-top: 32px;
+    border-top: 5px solid #3F51B5;
+    box-shadow: 3px 3px 3px gray;
+    overflow: scroll;
+  }
+
+  .feedback-form{
+    z-index: 999;
+  }
+
+  .feedback-btn:hover{
+    cursor: pointer;
+    background-color: #3F51B5;
+  }
