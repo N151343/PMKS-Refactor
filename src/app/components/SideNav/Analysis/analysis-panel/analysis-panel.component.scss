@@ -29,13 +29,12 @@
 }
 #default-view {
   background-color: white;
-  border-top: 5px solid #ffc107;
+  border-top: 5px solid #3F51B5;
   border-radius: 3px;
   box-shadow: 3px 3px 3px gray;
-  width:350px;
+  width:400px;
   gap: 10px;
-  height: fit-content;
-  margin-top: 125px;
+  margin: 10px;
   padding-left: 10px;
 }
 #import-export{
@@ -54,7 +53,7 @@ import-data, export-data{
 }
 
 *{
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", serif;
   letter-spacing: 0.25px;
 }
 
